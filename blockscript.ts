@@ -1,14 +1,15 @@
 import { sha256 } from 'js-sha256';
 
 class Block { // Main class
-    index: number
-    timestamp: Date
-    data: any
-    previousHash: any
-    nonce: any
-    hash: any
 
-    constructor(index: any, data: any, previousHash: any) {
+    public index: number;
+    public hash: string;
+    public previousHash: string;
+    public timestamp: Date;
+    public data: string;
+    public nonce: any;
+
+    constructor(index: number, data: string, previousHash: string) {
         this.index = index
         this.timestamp = new Date()
         this.data = data
@@ -39,7 +40,7 @@ class Block { // Main class
         return new Block(0, data, "0")
     }
 
-    static next(previous: any, data: any) { // create next block
+    static next(previous: any, data: string) { // create next block
         return new Block(previous.index + 1, data, previous.hash)
     }
 }
