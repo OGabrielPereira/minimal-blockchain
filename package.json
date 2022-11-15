@@ -1,0 +1,19 @@
+{
+  "name": "blockscript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon build/blockscript.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "js-sha256": "^0.9.0",
+    "nodemon": "^2.0.20"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.9"
+  }
+}
